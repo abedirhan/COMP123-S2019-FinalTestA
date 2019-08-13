@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 /*
@@ -124,12 +119,6 @@ namespace COMP123_S2019_FinalTestA.Views
         private void HeroGenerator_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void HeroGenerator_Activated(object sender, EventArgs e)
-        {
-
-
         }
 
 

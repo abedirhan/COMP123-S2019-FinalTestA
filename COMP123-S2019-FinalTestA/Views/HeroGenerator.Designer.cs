@@ -779,7 +779,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HeroGenerator";
             this.Text = "Hero Generator";
-            this.Activated += new System.EventHandler(this.HeroGenerator_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HeroGenerator_FormClosing);
             this.MainTabControl.ResumeLayout(false);
             this.IdentityPage.ResumeLayout(false);
