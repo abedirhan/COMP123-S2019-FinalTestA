@@ -116,7 +116,7 @@
             this.CsPopularityDataLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.CsPowerAllLabel = new System.Windows.Forms.Label();
+            this.CsAllPowerList = new System.Windows.Forms.ListBox();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.AbilityPage.SuspendLayout();
@@ -140,7 +140,7 @@
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(614, 377);
+            this.MainTabControl.Size = new System.Drawing.Size(665, 383);
             this.MainTabControl.TabIndex = 0;
             // 
             // IdentityPage
@@ -155,14 +155,14 @@
             this.IdentityPage.Location = new System.Drawing.Point(4, 33);
             this.IdentityPage.Margin = new System.Windows.Forms.Padding(2);
             this.IdentityPage.Name = "IdentityPage";
-            this.IdentityPage.Size = new System.Drawing.Size(606, 340);
+            this.IdentityPage.Size = new System.Drawing.Size(657, 346);
             this.IdentityPage.TabIndex = 2;
             this.IdentityPage.Text = "Identity";
             this.IdentityPage.UseVisualStyleBackColor = true;
             // 
             // GenerateNameButton
             // 
-            this.GenerateNameButton.Location = new System.Drawing.Point(334, 209);
+            this.GenerateNameButton.Location = new System.Drawing.Point(490, 214);
             this.GenerateNameButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateNameButton.Name = "GenerateNameButton";
             this.GenerateNameButton.Size = new System.Drawing.Size(160, 36);
@@ -173,10 +173,10 @@
             // 
             // HeroNameTextBox
             // 
-            this.HeroNameTextBox.Location = new System.Drawing.Point(187, 42);
+            this.HeroNameTextBox.Location = new System.Drawing.Point(204, 42);
             this.HeroNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.HeroNameTextBox.Name = "HeroNameTextBox";
-            this.HeroNameTextBox.Size = new System.Drawing.Size(308, 29);
+            this.HeroNameTextBox.Size = new System.Drawing.Size(446, 29);
             this.HeroNameTextBox.TabIndex = 1;
             // 
             // LastNameLabel
@@ -193,10 +193,10 @@
             // 
             this.LastNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.LastNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LastNameDataLabel.Location = new System.Drawing.Point(183, 155);
+            this.LastNameDataLabel.Location = new System.Drawing.Point(200, 155);
             this.LastNameDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameDataLabel.Name = "LastNameDataLabel";
-            this.LastNameDataLabel.Size = new System.Drawing.Size(312, 33);
+            this.LastNameDataLabel.Size = new System.Drawing.Size(450, 33);
             this.LastNameDataLabel.TabIndex = 0;
             this.LastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -204,10 +204,10 @@
             // 
             this.FirstNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.FirstNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FirstNameDataLabel.Location = new System.Drawing.Point(183, 113);
+            this.FirstNameDataLabel.Location = new System.Drawing.Point(200, 113);
             this.FirstNameDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameDataLabel.Name = "FirstNameDataLabel";
-            this.FirstNameDataLabel.Size = new System.Drawing.Size(312, 33);
+            this.FirstNameDataLabel.Size = new System.Drawing.Size(450, 33);
             this.FirstNameDataLabel.TabIndex = 0;
             this.FirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -238,7 +238,7 @@
             this.AbilityPage.Margin = new System.Windows.Forms.Padding(2);
             this.AbilityPage.Name = "AbilityPage";
             this.AbilityPage.Padding = new System.Windows.Forms.Padding(2);
-            this.AbilityPage.Size = new System.Drawing.Size(606, 340);
+            this.AbilityPage.Size = new System.Drawing.Size(657, 346);
             this.AbilityPage.TabIndex = 0;
             this.AbilityPage.Text = "Abilities";
             this.AbilityPage.UseVisualStyleBackColor = true;
@@ -280,7 +280,7 @@
             this.AbilityTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.AbilityTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.AbilityTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.AbilityTableLayoutPanel.Size = new System.Drawing.Size(595, 332);
+            this.AbilityTableLayoutPanel.Size = new System.Drawing.Size(643, 332);
             this.AbilityTableLayoutPanel.TabIndex = 3;
             // 
             // PhysicalAbilitiesLabel
@@ -292,7 +292,7 @@
             this.PhysicalAbilitiesLabel.Location = new System.Drawing.Point(2, 0);
             this.PhysicalAbilitiesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhysicalAbilitiesLabel.Name = "PhysicalAbilitiesLabel";
-            this.PhysicalAbilitiesLabel.Size = new System.Drawing.Size(292, 47);
+            this.PhysicalAbilitiesLabel.Size = new System.Drawing.Size(316, 47);
             this.PhysicalAbilitiesLabel.TabIndex = 2;
             this.PhysicalAbilitiesLabel.Text = "Physical Abilities";
             this.PhysicalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,10 +304,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PopularityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PopularityDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PopularityDataLabel.Location = new System.Drawing.Point(446, 188);
+            this.PopularityDataLabel.Location = new System.Drawing.Point(482, 188);
             this.PopularityDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PopularityDataLabel.Name = "PopularityDataLabel";
-            this.PopularityDataLabel.Size = new System.Drawing.Size(147, 47);
+            this.PopularityDataLabel.Size = new System.Drawing.Size(159, 47);
             this.PopularityDataLabel.TabIndex = 1;
             this.PopularityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -317,10 +317,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AbilityTableLayoutPanel.SetColumnSpan(this.MentalAbilitiesLabel, 2);
-            this.MentalAbilitiesLabel.Location = new System.Drawing.Point(298, 0);
+            this.MentalAbilitiesLabel.Location = new System.Drawing.Point(322, 0);
             this.MentalAbilitiesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MentalAbilitiesLabel.Name = "MentalAbilitiesLabel";
-            this.MentalAbilitiesLabel.Size = new System.Drawing.Size(295, 47);
+            this.MentalAbilitiesLabel.Size = new System.Drawing.Size(319, 47);
             this.MentalAbilitiesLabel.TabIndex = 2;
             this.MentalAbilitiesLabel.Text = "Mental Abilities";
             this.MentalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -332,10 +332,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PsycheDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PsycheDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PsycheDataLabel.Location = new System.Drawing.Point(446, 141);
+            this.PsycheDataLabel.Location = new System.Drawing.Point(482, 141);
             this.PsycheDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PsycheDataLabel.Name = "PsycheDataLabel";
-            this.PsycheDataLabel.Size = new System.Drawing.Size(147, 47);
+            this.PsycheDataLabel.Size = new System.Drawing.Size(159, 47);
             this.PsycheDataLabel.TabIndex = 1;
             this.PsycheDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -346,10 +346,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IntuitionDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.IntuitionDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IntuitionDataLabel.Location = new System.Drawing.Point(446, 94);
+            this.IntuitionDataLabel.Location = new System.Drawing.Point(482, 94);
             this.IntuitionDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IntuitionDataLabel.Name = "IntuitionDataLabel";
-            this.IntuitionDataLabel.Size = new System.Drawing.Size(147, 47);
+            this.IntuitionDataLabel.Size = new System.Drawing.Size(159, 47);
             this.IntuitionDataLabel.TabIndex = 1;
             this.IntuitionDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -358,10 +358,10 @@
             this.PopularityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PopularityLabel.Location = new System.Drawing.Point(298, 188);
+            this.PopularityLabel.Location = new System.Drawing.Point(322, 188);
             this.PopularityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PopularityLabel.Name = "PopularityLabel";
-            this.PopularityLabel.Size = new System.Drawing.Size(144, 47);
+            this.PopularityLabel.Size = new System.Drawing.Size(156, 47);
             this.PopularityLabel.TabIndex = 2;
             this.PopularityLabel.Text = "Popularity";
             this.PopularityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,7 +374,7 @@
             this.FightingLabel.Location = new System.Drawing.Point(2, 47);
             this.FightingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FightingLabel.Name = "FightingLabel";
-            this.FightingLabel.Size = new System.Drawing.Size(144, 47);
+            this.FightingLabel.Size = new System.Drawing.Size(156, 47);
             this.FightingLabel.TabIndex = 2;
             this.FightingLabel.Text = "Fighting";
             this.FightingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -386,10 +386,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ReasonDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ReasonDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ReasonDataLabel.Location = new System.Drawing.Point(446, 47);
+            this.ReasonDataLabel.Location = new System.Drawing.Point(482, 47);
             this.ReasonDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReasonDataLabel.Name = "ReasonDataLabel";
-            this.ReasonDataLabel.Size = new System.Drawing.Size(147, 47);
+            this.ReasonDataLabel.Size = new System.Drawing.Size(159, 47);
             this.ReasonDataLabel.TabIndex = 1;
             this.ReasonDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -400,10 +400,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EnduranceDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.EnduranceDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EnduranceDataLabel.Location = new System.Drawing.Point(150, 188);
+            this.EnduranceDataLabel.Location = new System.Drawing.Point(162, 188);
             this.EnduranceDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EnduranceDataLabel.Name = "EnduranceDataLabel";
-            this.EnduranceDataLabel.Size = new System.Drawing.Size(144, 47);
+            this.EnduranceDataLabel.Size = new System.Drawing.Size(156, 47);
             this.EnduranceDataLabel.TabIndex = 1;
             this.EnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -415,7 +415,7 @@
             this.AgilityLabel.Location = new System.Drawing.Point(2, 94);
             this.AgilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AgilityLabel.Name = "AgilityLabel";
-            this.AgilityLabel.Size = new System.Drawing.Size(144, 47);
+            this.AgilityLabel.Size = new System.Drawing.Size(156, 47);
             this.AgilityLabel.TabIndex = 2;
             this.AgilityLabel.Text = "Agility";
             this.AgilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,10 +425,10 @@
             this.PsycheLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PsycheLabel.Location = new System.Drawing.Point(298, 141);
+            this.PsycheLabel.Location = new System.Drawing.Point(322, 141);
             this.PsycheLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PsycheLabel.Name = "PsycheLabel";
-            this.PsycheLabel.Size = new System.Drawing.Size(144, 47);
+            this.PsycheLabel.Size = new System.Drawing.Size(156, 47);
             this.PsycheLabel.TabIndex = 2;
             this.PsycheLabel.Text = "Psyche";
             this.PsycheLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -438,10 +438,10 @@
             this.IntuitionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IntuitionLabel.Location = new System.Drawing.Point(298, 94);
+            this.IntuitionLabel.Location = new System.Drawing.Point(322, 94);
             this.IntuitionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IntuitionLabel.Name = "IntuitionLabel";
-            this.IntuitionLabel.Size = new System.Drawing.Size(144, 47);
+            this.IntuitionLabel.Size = new System.Drawing.Size(156, 47);
             this.IntuitionLabel.TabIndex = 2;
             this.IntuitionLabel.Text = "Intuition";
             this.IntuitionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -454,7 +454,7 @@
             this.StrenghLabel.Location = new System.Drawing.Point(2, 141);
             this.StrenghLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StrenghLabel.Name = "StrenghLabel";
-            this.StrenghLabel.Size = new System.Drawing.Size(144, 47);
+            this.StrenghLabel.Size = new System.Drawing.Size(156, 47);
             this.StrenghLabel.TabIndex = 2;
             this.StrenghLabel.Text = "Strength";
             this.StrenghLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -467,7 +467,7 @@
             this.EnduranceLabel.Location = new System.Drawing.Point(2, 188);
             this.EnduranceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EnduranceLabel.Name = "EnduranceLabel";
-            this.EnduranceLabel.Size = new System.Drawing.Size(144, 47);
+            this.EnduranceLabel.Size = new System.Drawing.Size(156, 47);
             this.EnduranceLabel.TabIndex = 2;
             this.EnduranceLabel.Text = "Endurance";
             this.EnduranceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -479,10 +479,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AgilityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.AgilityDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AgilityDataLabel.Location = new System.Drawing.Point(150, 94);
+            this.AgilityDataLabel.Location = new System.Drawing.Point(162, 94);
             this.AgilityDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AgilityDataLabel.Name = "AgilityDataLabel";
-            this.AgilityDataLabel.Size = new System.Drawing.Size(144, 47);
+            this.AgilityDataLabel.Size = new System.Drawing.Size(156, 47);
             this.AgilityDataLabel.TabIndex = 1;
             this.AgilityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -491,10 +491,10 @@
             this.ReasonLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ReasonLabel.Location = new System.Drawing.Point(298, 47);
+            this.ReasonLabel.Location = new System.Drawing.Point(322, 47);
             this.ReasonLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReasonLabel.Name = "ReasonLabel";
-            this.ReasonLabel.Size = new System.Drawing.Size(144, 47);
+            this.ReasonLabel.Size = new System.Drawing.Size(156, 47);
             this.ReasonLabel.TabIndex = 2;
             this.ReasonLabel.Text = "Reason";
             this.ReasonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -506,10 +506,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StrengthDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.StrengthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StrengthDataLabel.Location = new System.Drawing.Point(150, 141);
+            this.StrengthDataLabel.Location = new System.Drawing.Point(162, 141);
             this.StrengthDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StrengthDataLabel.Name = "StrengthDataLabel";
-            this.StrengthDataLabel.Size = new System.Drawing.Size(144, 47);
+            this.StrengthDataLabel.Size = new System.Drawing.Size(156, 47);
             this.StrengthDataLabel.TabIndex = 1;
             this.StrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -520,10 +520,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FightingDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.FightingDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FightingDataLabel.Location = new System.Drawing.Point(150, 47);
+            this.FightingDataLabel.Location = new System.Drawing.Point(162, 47);
             this.FightingDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FightingDataLabel.Name = "FightingDataLabel";
-            this.FightingDataLabel.Size = new System.Drawing.Size(144, 47);
+            this.FightingDataLabel.Size = new System.Drawing.Size(156, 47);
             this.FightingDataLabel.TabIndex = 1;
             this.FightingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -533,10 +533,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AbilityTableLayoutPanel.SetColumnSpan(this.GenerateAbilitiesButton, 2);
-            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(298, 284);
+            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(322, 284);
             this.GenerateAbilitiesButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
-            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(295, 46);
+            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(319, 46);
             this.GenerateAbilitiesButton.TabIndex = 3;
             this.GenerateAbilitiesButton.Text = "Generate Abilities";
             this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
@@ -551,7 +551,7 @@
             this.PowersPage.Margin = new System.Windows.Forms.Padding(2);
             this.PowersPage.Name = "PowersPage";
             this.PowersPage.Padding = new System.Windows.Forms.Padding(2);
-            this.PowersPage.Size = new System.Drawing.Size(606, 340);
+            this.PowersPage.Size = new System.Drawing.Size(657, 346);
             this.PowersPage.TabIndex = 1;
             this.PowersPage.Text = "Powers";
             this.PowersPage.UseVisualStyleBackColor = true;
@@ -561,10 +561,10 @@
             this.GeneratePower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GeneratePower.Location = new System.Drawing.Point(267, 267);
+            this.GeneratePower.Location = new System.Drawing.Point(300, 266);
             this.GeneratePower.Margin = new System.Windows.Forms.Padding(2);
             this.GeneratePower.Name = "GeneratePower";
-            this.GeneratePower.Size = new System.Drawing.Size(295, 46);
+            this.GeneratePower.Size = new System.Drawing.Size(346, 52);
             this.GeneratePower.TabIndex = 4;
             this.GeneratePower.Text = "Generate Power";
             this.GeneratePower.UseVisualStyleBackColor = true;
@@ -572,7 +572,7 @@
             // 
             // PowerLAbel
             // 
-            this.PowerLAbel.Location = new System.Drawing.Point(38, 63);
+            this.PowerLAbel.Location = new System.Drawing.Point(8, 14);
             this.PowerLAbel.Name = "PowerLAbel";
             this.PowerLAbel.Size = new System.Drawing.Size(107, 31);
             this.PowerLAbel.TabIndex = 1;
@@ -593,14 +593,14 @@
             this.tableLayoutPanel1.Controls.Add(this.PowerTwoDataLabel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.PowerThreeDataLabel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.PowerFourDataLabel, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 106);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 50);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(531, 156);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(618, 194);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // PowerOneDataLabel
@@ -609,9 +609,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PowerOneDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PowerOneDataLabel.Location = new System.Drawing.Point(135, 0);
+            this.tableLayoutPanel1.SetColumnSpan(this.PowerOneDataLabel, 3);
+            this.PowerOneDataLabel.Location = new System.Drawing.Point(157, 0);
             this.PowerOneDataLabel.Name = "PowerOneDataLabel";
-            this.PowerOneDataLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerOneDataLabel.Size = new System.Drawing.Size(458, 48);
             this.PowerOneDataLabel.TabIndex = 5;
             // 
             // PowerOneLabel
@@ -621,7 +622,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PowerOneLabel.Location = new System.Drawing.Point(3, 0);
             this.PowerOneLabel.Name = "PowerOneLabel";
-            this.PowerOneLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerOneLabel.Size = new System.Drawing.Size(148, 48);
             this.PowerOneLabel.TabIndex = 5;
             this.PowerOneLabel.Text = "Power 1";
             this.PowerOneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -631,9 +632,9 @@
             this.PowerTwoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PowerTwoLabel.Location = new System.Drawing.Point(3, 39);
+            this.PowerTwoLabel.Location = new System.Drawing.Point(3, 48);
             this.PowerTwoLabel.Name = "PowerTwoLabel";
-            this.PowerTwoLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerTwoLabel.Size = new System.Drawing.Size(148, 48);
             this.PowerTwoLabel.TabIndex = 6;
             this.PowerTwoLabel.Text = "Power 2";
             this.PowerTwoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -643,9 +644,9 @@
             this.PowerThreeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PowerThreeLabel.Location = new System.Drawing.Point(3, 78);
+            this.PowerThreeLabel.Location = new System.Drawing.Point(3, 96);
             this.PowerThreeLabel.Name = "PowerThreeLabel";
-            this.PowerThreeLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerThreeLabel.Size = new System.Drawing.Size(148, 48);
             this.PowerThreeLabel.TabIndex = 7;
             this.PowerThreeLabel.Text = "Power 3";
             this.PowerThreeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -655,9 +656,9 @@
             this.PowerFourLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PowerFourLabel.Location = new System.Drawing.Point(3, 117);
+            this.PowerFourLabel.Location = new System.Drawing.Point(3, 144);
             this.PowerFourLabel.Name = "PowerFourLabel";
-            this.PowerFourLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerFourLabel.Size = new System.Drawing.Size(148, 50);
             this.PowerFourLabel.TabIndex = 8;
             this.PowerFourLabel.Text = "Power 4";
             this.PowerFourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -668,9 +669,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PowerTwoDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PowerTwoDataLabel.Location = new System.Drawing.Point(135, 39);
+            this.tableLayoutPanel1.SetColumnSpan(this.PowerTwoDataLabel, 3);
+            this.PowerTwoDataLabel.Location = new System.Drawing.Point(157, 48);
             this.PowerTwoDataLabel.Name = "PowerTwoDataLabel";
-            this.PowerTwoDataLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerTwoDataLabel.Size = new System.Drawing.Size(458, 48);
             this.PowerTwoDataLabel.TabIndex = 9;
             // 
             // PowerThreeDataLabel
@@ -679,9 +681,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PowerThreeDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PowerThreeDataLabel.Location = new System.Drawing.Point(135, 78);
+            this.tableLayoutPanel1.SetColumnSpan(this.PowerThreeDataLabel, 3);
+            this.PowerThreeDataLabel.Location = new System.Drawing.Point(157, 96);
             this.PowerThreeDataLabel.Name = "PowerThreeDataLabel";
-            this.PowerThreeDataLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerThreeDataLabel.Size = new System.Drawing.Size(458, 48);
             this.PowerThreeDataLabel.TabIndex = 10;
             // 
             // PowerFourDataLabel
@@ -690,14 +693,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PowerFourDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PowerFourDataLabel.Location = new System.Drawing.Point(135, 117);
+            this.tableLayoutPanel1.SetColumnSpan(this.PowerFourDataLabel, 3);
+            this.PowerFourDataLabel.Location = new System.Drawing.Point(157, 144);
             this.PowerFourDataLabel.Name = "PowerFourDataLabel";
-            this.PowerFourDataLabel.Size = new System.Drawing.Size(126, 39);
+            this.PowerFourDataLabel.Size = new System.Drawing.Size(458, 50);
             this.PowerFourDataLabel.TabIndex = 11;
             // 
             // CharacterSheet
             // 
-            this.CharacterSheet.Controls.Add(this.CsPowerAllLabel);
+            this.CharacterSheet.Controls.Add(this.CsAllPowerList);
             this.CharacterSheet.Controls.Add(this.label3);
             this.CharacterSheet.Controls.Add(this.CsHeroNameDataLabel);
             this.CharacterSheet.Controls.Add(this.label2);
@@ -709,7 +713,7 @@
             this.CharacterSheet.Margin = new System.Windows.Forms.Padding(2);
             this.CharacterSheet.Name = "CharacterSheet";
             this.CharacterSheet.Padding = new System.Windows.Forms.Padding(2);
-            this.CharacterSheet.Size = new System.Drawing.Size(606, 340);
+            this.CharacterSheet.Size = new System.Drawing.Size(657, 346);
             this.CharacterSheet.TabIndex = 3;
             this.CharacterSheet.Text = "Chracter Sheet";
             this.CharacterSheet.UseVisualStyleBackColor = true;
@@ -726,7 +730,7 @@
             this.toolStripSeparator6});
             this.HeroToolStrip.Location = new System.Drawing.Point(2, 26);
             this.HeroToolStrip.Name = "HeroToolStrip";
-            this.HeroToolStrip.Size = new System.Drawing.Size(602, 27);
+            this.HeroToolStrip.Size = new System.Drawing.Size(653, 27);
             this.HeroToolStrip.TabIndex = 1;
             this.HeroToolStrip.Text = "toolStrip1";
             // 
@@ -784,7 +788,7 @@
             this.HeroMenuStrip.Location = new System.Drawing.Point(2, 2);
             this.HeroMenuStrip.Name = "HeroMenuStrip";
             this.HeroMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.HeroMenuStrip.Size = new System.Drawing.Size(602, 24);
+            this.HeroMenuStrip.Size = new System.Drawing.Size(653, 24);
             this.HeroMenuStrip.TabIndex = 0;
             this.HeroMenuStrip.Text = "menuStrip1";
             // 
@@ -923,14 +927,14 @@
             this.CsTableLayout.Controls.Add(this.CsStrenghtDataLabel, 1, 2);
             this.CsTableLayout.Controls.Add(this.CsEnduranceDataLabel, 1, 3);
             this.CsTableLayout.Controls.Add(this.CsReasonDataLabel, 3, 0);
-            this.CsTableLayout.Location = new System.Drawing.Point(15, 138);
+            this.CsTableLayout.Location = new System.Drawing.Point(15, 147);
             this.CsTableLayout.Name = "CsTableLayout";
             this.CsTableLayout.RowCount = 4;
             this.CsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.CsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.CsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.CsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.CsTableLayout.Size = new System.Drawing.Size(573, 130);
+            this.CsTableLayout.Size = new System.Drawing.Size(445, 167);
             this.CsTableLayout.TabIndex = 2;
             // 
             // CsFightingLabel
@@ -940,7 +944,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsFightingLabel.Location = new System.Drawing.Point(3, 0);
             this.CsFightingLabel.Name = "CsFightingLabel";
-            this.CsFightingLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsFightingLabel.Size = new System.Drawing.Size(105, 41);
             this.CsFightingLabel.TabIndex = 3;
             this.CsFightingLabel.Text = "Fighting";
             this.CsFightingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -950,9 +954,9 @@
             this.CsEnduranceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsEnduranceLabel.Location = new System.Drawing.Point(3, 96);
+            this.CsEnduranceLabel.Location = new System.Drawing.Point(3, 123);
             this.CsEnduranceLabel.Name = "CsEnduranceLabel";
-            this.CsEnduranceLabel.Size = new System.Drawing.Size(137, 34);
+            this.CsEnduranceLabel.Size = new System.Drawing.Size(105, 44);
             this.CsEnduranceLabel.TabIndex = 5;
             this.CsEnduranceLabel.Text = "Endurance";
             this.CsEnduranceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -962,9 +966,9 @@
             this.CsAgilityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsAgilityLabel.Location = new System.Drawing.Point(3, 32);
+            this.CsAgilityLabel.Location = new System.Drawing.Point(3, 41);
             this.CsAgilityLabel.Name = "CsAgilityLabel";
-            this.CsAgilityLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsAgilityLabel.Size = new System.Drawing.Size(105, 41);
             this.CsAgilityLabel.TabIndex = 7;
             this.CsAgilityLabel.Text = "Agility";
             this.CsAgilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -974,9 +978,9 @@
             this.CsReasonLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsReasonLabel.Location = new System.Drawing.Point(289, 0);
+            this.CsReasonLabel.Location = new System.Drawing.Point(225, 0);
             this.CsReasonLabel.Name = "CsReasonLabel";
-            this.CsReasonLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsReasonLabel.Size = new System.Drawing.Size(105, 41);
             this.CsReasonLabel.TabIndex = 9;
             this.CsReasonLabel.Text = "Reason";
             this.CsReasonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -986,9 +990,9 @@
             this.CsStrenghtLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsStrenghtLabel.Location = new System.Drawing.Point(3, 64);
+            this.CsStrenghtLabel.Location = new System.Drawing.Point(3, 82);
             this.CsStrenghtLabel.Name = "CsStrenghtLabel";
-            this.CsStrenghtLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsStrenghtLabel.Size = new System.Drawing.Size(105, 41);
             this.CsStrenghtLabel.TabIndex = 11;
             this.CsStrenghtLabel.Text = "Strenght";
             this.CsStrenghtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -998,9 +1002,9 @@
             this.CsInitutionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsInitutionLabel.Location = new System.Drawing.Point(289, 32);
+            this.CsInitutionLabel.Location = new System.Drawing.Point(225, 41);
             this.CsInitutionLabel.Name = "CsInitutionLabel";
-            this.CsInitutionLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsInitutionLabel.Size = new System.Drawing.Size(105, 41);
             this.CsInitutionLabel.TabIndex = 13;
             this.CsInitutionLabel.Text = "Initution";
             this.CsInitutionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1010,9 +1014,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(11, 69);
+            this.label1.Location = new System.Drawing.Point(-17, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 39);
+            this.label1.Size = new System.Drawing.Size(179, 45);
             this.label1.TabIndex = 4;
             this.label1.Text = "Hero Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1023,9 +1027,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsHeroNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsHeroNameDataLabel.Location = new System.Drawing.Point(161, 69);
+            this.CsHeroNameDataLabel.Location = new System.Drawing.Point(133, 69);
             this.CsHeroNameDataLabel.Name = "CsHeroNameDataLabel";
-            this.CsHeroNameDataLabel.Size = new System.Drawing.Size(427, 39);
+            this.CsHeroNameDataLabel.Size = new System.Drawing.Size(506, 45);
             this.CsHeroNameDataLabel.TabIndex = 5;
             this.CsHeroNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1034,9 +1038,9 @@
             this.CsPsycheLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsPsycheLabel.Location = new System.Drawing.Point(289, 64);
+            this.CsPsycheLabel.Location = new System.Drawing.Point(225, 82);
             this.CsPsycheLabel.Name = "CsPsycheLabel";
-            this.CsPsycheLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsPsycheLabel.Size = new System.Drawing.Size(105, 41);
             this.CsPsycheLabel.TabIndex = 14;
             this.CsPsycheLabel.Text = "Psyche";
             this.CsPsycheLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1046,9 +1050,9 @@
             this.CsPopularityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsPopularityLabel.Location = new System.Drawing.Point(289, 96);
+            this.CsPopularityLabel.Location = new System.Drawing.Point(225, 123);
             this.CsPopularityLabel.Name = "CsPopularityLabel";
-            this.CsPopularityLabel.Size = new System.Drawing.Size(137, 34);
+            this.CsPopularityLabel.Size = new System.Drawing.Size(105, 44);
             this.CsPopularityLabel.TabIndex = 15;
             this.CsPopularityLabel.Text = "Popularity";
             this.CsPopularityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1059,9 +1063,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsFightingDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsFightingDataLabel.Location = new System.Drawing.Point(146, 0);
+            this.CsFightingDataLabel.Location = new System.Drawing.Point(114, 0);
             this.CsFightingDataLabel.Name = "CsFightingDataLabel";
-            this.CsFightingDataLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsFightingDataLabel.Size = new System.Drawing.Size(105, 41);
             this.CsFightingDataLabel.TabIndex = 6;
             this.CsFightingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1071,9 +1075,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsAgilityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsAgilityDataLabel.Location = new System.Drawing.Point(146, 32);
+            this.CsAgilityDataLabel.Location = new System.Drawing.Point(114, 41);
             this.CsAgilityDataLabel.Name = "CsAgilityDataLabel";
-            this.CsAgilityDataLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsAgilityDataLabel.Size = new System.Drawing.Size(105, 41);
             this.CsAgilityDataLabel.TabIndex = 16;
             this.CsAgilityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1083,9 +1087,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsStrenghtDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsStrenghtDataLabel.Location = new System.Drawing.Point(146, 64);
+            this.CsStrenghtDataLabel.Location = new System.Drawing.Point(114, 82);
             this.CsStrenghtDataLabel.Name = "CsStrenghtDataLabel";
-            this.CsStrenghtDataLabel.Size = new System.Drawing.Size(137, 32);
+            this.CsStrenghtDataLabel.Size = new System.Drawing.Size(105, 41);
             this.CsStrenghtDataLabel.TabIndex = 17;
             this.CsStrenghtDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1095,9 +1099,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsEnduranceDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsEnduranceDataLabel.Location = new System.Drawing.Point(146, 96);
+            this.CsEnduranceDataLabel.Location = new System.Drawing.Point(114, 123);
             this.CsEnduranceDataLabel.Name = "CsEnduranceDataLabel";
-            this.CsEnduranceDataLabel.Size = new System.Drawing.Size(137, 34);
+            this.CsEnduranceDataLabel.Size = new System.Drawing.Size(105, 44);
             this.CsEnduranceDataLabel.TabIndex = 18;
             this.CsEnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1107,9 +1111,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsReasonDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsReasonDataLabel.Location = new System.Drawing.Point(432, 0);
+            this.CsReasonDataLabel.Location = new System.Drawing.Point(336, 0);
             this.CsReasonDataLabel.Name = "CsReasonDataLabel";
-            this.CsReasonDataLabel.Size = new System.Drawing.Size(138, 32);
+            this.CsReasonDataLabel.Size = new System.Drawing.Size(106, 41);
             this.CsReasonDataLabel.TabIndex = 19;
             this.CsReasonDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1119,9 +1123,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsInitutionDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsInitutionDataLabel.Location = new System.Drawing.Point(432, 32);
+            this.CsInitutionDataLabel.Location = new System.Drawing.Point(336, 41);
             this.CsInitutionDataLabel.Name = "CsInitutionDataLabel";
-            this.CsInitutionDataLabel.Size = new System.Drawing.Size(138, 32);
+            this.CsInitutionDataLabel.Size = new System.Drawing.Size(106, 41);
             this.CsInitutionDataLabel.TabIndex = 20;
             this.CsInitutionDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1131,9 +1135,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsPsycheDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsPsycheDataLabel.Location = new System.Drawing.Point(432, 64);
+            this.CsPsycheDataLabel.Location = new System.Drawing.Point(336, 82);
             this.CsPsycheDataLabel.Name = "CsPsycheDataLabel";
-            this.CsPsycheDataLabel.Size = new System.Drawing.Size(138, 32);
+            this.CsPsycheDataLabel.Size = new System.Drawing.Size(106, 41);
             this.CsPsycheDataLabel.TabIndex = 21;
             this.CsPsycheDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1143,9 +1147,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CsPopularityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsPopularityDataLabel.Location = new System.Drawing.Point(432, 96);
+            this.CsPopularityDataLabel.Location = new System.Drawing.Point(336, 123);
             this.CsPopularityDataLabel.Name = "CsPopularityDataLabel";
-            this.CsPopularityDataLabel.Size = new System.Drawing.Size(138, 34);
+            this.CsPopularityDataLabel.Size = new System.Drawing.Size(106, 44);
             this.CsPopularityDataLabel.TabIndex = 22;
             this.CsPopularityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1154,9 +1158,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(-9, 108);
+            this.label2.Location = new System.Drawing.Point(-36, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 27);
+            this.label2.Size = new System.Drawing.Size(179, 33);
             this.label2.TabIndex = 4;
             this.label2.Text = "Abilities";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1166,29 +1170,26 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(18, 280);
+            this.label3.Location = new System.Drawing.Point(460, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 27);
+            this.label3.Size = new System.Drawing.Size(124, 33);
             this.label3.TabIndex = 6;
             this.label3.Text = "Powers";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // CsPowerAllLabel
+            // CsAllPowerList
             // 
-            this.CsPowerAllLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CsPowerAllLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CsPowerAllLabel.Location = new System.Drawing.Point(97, 274);
-            this.CsPowerAllLabel.Name = "CsPowerAllLabel";
-            this.CsPowerAllLabel.Size = new System.Drawing.Size(491, 39);
-            this.CsPowerAllLabel.TabIndex = 7;
-            this.CsPowerAllLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CsAllPowerList.FormattingEnabled = true;
+            this.CsAllPowerList.ItemHeight = 24;
+            this.CsAllPowerList.Location = new System.Drawing.Point(463, 144);
+            this.CsAllPowerList.Name = "CsAllPowerList";
+            this.CsAllPowerList.Size = new System.Drawing.Size(176, 172);
+            this.CsAllPowerList.TabIndex = 2;
             // 
             // HeroGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.ClientSize = new System.Drawing.Size(614, 458);
+            this.ClientSize = new System.Drawing.Size(665, 444);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MainTabControl);
@@ -1293,7 +1294,6 @@
         private System.Windows.Forms.Label CsReasonLabel;
         private System.Windows.Forms.Label CsAgilityLabel;
         private System.Windows.Forms.Label CsEnduranceLabel;
-        private System.Windows.Forms.Label CsPowerAllLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label CsPopularityDataLabel;
@@ -1306,5 +1306,6 @@
         private System.Windows.Forms.Label CsStrenghtDataLabel;
         private System.Windows.Forms.Label CsEnduranceDataLabel;
         private System.Windows.Forms.Label CsReasonDataLabel;
+        private System.Windows.Forms.ListBox CsAllPowerList;
     }
 }

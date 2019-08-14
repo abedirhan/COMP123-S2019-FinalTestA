@@ -150,13 +150,13 @@ namespace COMP123_S2019_FinalTestA.Objects
         public int Karma { get; set; }
 
         // Power List
-        public static List<Power> Powers;
+        public static List<string> Powers;
 
         // Constructor
         public Hero()
         {
             // instantiates an empty Power List
-            Powers = new List<Power>();
+            Powers = new List<string>();
         }
     }
 }

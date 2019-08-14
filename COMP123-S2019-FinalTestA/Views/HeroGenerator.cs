@@ -135,6 +135,9 @@ namespace COMP123_S2019_FinalTestA.Views
             randomIndex = random.Next(PowerList.Count);
             PowerFourDataLabel.Text = PowerList[randomIndex];
             Hero.Powers.Add(PowerOneDataLabel.Text);
+            Hero.Powers.Add(PowerTwoDataLabel.Text);
+            Hero.Powers.Add(PowerThreeDataLabel.Text);
+            Hero.Powers.Add(PowerFourDataLabel.Text);
         }
 
         /// <summary>
@@ -276,7 +279,10 @@ namespace COMP123_S2019_FinalTestA.Views
             CsPsycheDataLabel.Text = Program.chracter.Psyche;
             CsPopularityDataLabel.Text = Program.chracter.Popularity;
             CsHeroNameDataLabel.Text = Program.chracter.HeroName;
-            
+            foreach (var a in Hero.Powers)
+            {
+                CsAllPowerList.Items.Add(a);
+            }
 
 
 
