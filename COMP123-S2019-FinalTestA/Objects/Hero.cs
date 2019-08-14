@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * STUDENT NAME: 
- * STUDENT ID:
+ * STUDENT NAME: Ayhan SAGLAM
+ * STUDENT ID: 301059969
  * DESCRIPTION: This is the Hero Data Container Class
  */
 
 namespace COMP123_S2019_FinalTestA.Objects
 {
-    class Hero
+    public class Hero
     {
         // PRIVATE INSTANCE VARIABLES
         private string m_fighting;
@@ -150,10 +150,10 @@ namespace COMP123_S2019_FinalTestA.Objects
         public int Karma { get; set; }
 
         // Power List
-        List<Power> Powers;
+        public static List<Power> Powers;
 
         // Constructor
-        Hero()
+        public Hero()
         {
             // instantiates an empty Power List
             Powers = new List<Power>();

@@ -6,7 +6,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * STUDENT NAME: Ayhan SAGLAM
+ * STUDENT ID:301059969
+ * DESCRIPTION: This is the About Form
+ */
 namespace COMP123_S2019_FinalTestA.Views
 {
     public partial class AboutForm : Form
@@ -101,5 +105,10 @@ namespace COMP123_S2019_FinalTestA.Views
             }
         }
         #endregion
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

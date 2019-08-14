@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using COMP123_S2019_FinalTestA.Objects;
 
 /*
  * STUDENT NAME: Ayhan SAGLAM
@@ -15,6 +16,9 @@ namespace COMP123_S2019_FinalTestA.Views
     {
         public static List<string> NameList = new List<string>();
         public static List<string> LastNameList = new List<string>();
+        public static List<string> PowerList = new List<string>();
+
+        Random random = new Random();
         public HeroGenerator()
         {
             InitializeComponent();
@@ -39,6 +43,7 @@ namespace COMP123_S2019_FinalTestA.Views
                 nameReader.Dispose();
             }
         }
+
         /// <summary>
         /// last name reading
         /// </summary>
@@ -61,23 +66,75 @@ namespace COMP123_S2019_FinalTestA.Views
 
         }
         /// <summary>
-        /// Generate first and last name
+        /// Generate first and last name when you click generate button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
+            LoadNames();
+        }
+        /// <summary>
+        /// Method generate first name and last name
+        /// </summary>
+        private void LoadNames()
+        {
             // Random Name Generator
             ReadName(@"../../Data/firstNames.txt");
-            Random random1 = new Random();
-            var nameCount = random1.Next(NameList.Count);
+           
+            var nameCount = random.Next(NameList.Count);
             FirstNameDataLabel.Text = NameList[nameCount];
+            Program.chracter.FirstName = FirstNameDataLabel.Text;
+            
 
             //Random Last Name Generator
             ReadLastName(@"../../Data/lastNames.txt");
-            Random random2 = new Random();
-            var lastNameCount = random2.Next(LastNameList.Count);
+            
+            var lastNameCount = random.Next(LastNameList.Count);
             LastNameDataLabel.Text = LastNameList[lastNameCount];
+            Program.chracter.LastName = LastNameDataLabel.Text;
+
+            Program.chracter.HeroName = FirstNameDataLabel.Text + " " + LastNameDataLabel.Text;
+
+        }
+        /// <summary>
+        /// Read Power
+        /// </summary>
+        /// <param name="fileName"></param>
+        static void LoadPower(string fileName)
+        {
+            using (StreamReader powerReader = new StreamReader(File.Open(fileName, FileMode.Open)))
+            {
+                var randomPower = powerReader.ReadLine();
+                while (randomPower != null)
+                {
+                    PowerList.Add(randomPower);
+                    randomPower = powerReader.ReadLine();
+                }
+
+                //cleanup
+                powerReader.Close();
+                powerReader.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// Load Power
+        /// </summary>
+        private void GenerateRandomPowers()
+        {
+            // Random Power Generator
+            
+
+            var randomIndex = random.Next(PowerList.Count);
+            PowerOneDataLabel.Text = PowerList[randomIndex];
+            randomIndex = random.Next(PowerList.Count);
+            PowerTwoDataLabel.Text = PowerList[randomIndex];
+            randomIndex = random.Next(PowerList.Count);
+            PowerThreeDataLabel.Text = PowerList[randomIndex];
+            randomIndex = random.Next(PowerList.Count);
+            PowerFourDataLabel.Text = PowerList[randomIndex];
+            Hero.Powers.Add(PowerOneDataLabel.Text);
         }
 
         /// <summary>
@@ -121,8 +178,6 @@ namespace COMP123_S2019_FinalTestA.Views
             Application.Exit();
         }
 
-
-
         private void openToolStripButton_Click(object sender, EventArgs e)
         {
             ChracterOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
@@ -138,8 +193,7 @@ namespace COMP123_S2019_FinalTestA.Views
                     var input = inputStream.ReadLine();
                     while (input != null)
                     {
-                        OpenDeneme.Items.Add(input);
-                        input = inputStream.ReadLine();
+                     
 
                     }
                     //cleanup
@@ -148,39 +202,7 @@ namespace COMP123_S2019_FinalTestA.Views
                 }
             }
         }
-        /// <summary>
-        /// Open Binary File
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BinaryOpenToolStripButton_Click(object sender, EventArgs e)
-        {
-            // configuration for openFileDialog
-            ChracterOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            ChracterOpenFileDialog.FileName = "Character_Sheet.dat";
-            ChracterOpenFileDialog.Filter = "Binary Files (*.dat)|*.dat|All Files (*.*)|*.*";
 
-            var result = ChracterOpenFileDialog.ShowDialog();
-
-            if (result != DialogResult.Cancel)
-            {
-                // open file stream to read
-                using (BinaryReader inputStream = new BinaryReader(File.Open(ChracterOpenFileDialog.FileName, FileMode.Open)))
-                {
-                    // read stuff from the file into the Character Sheet object
-                    var input=inputStream.ReadString();
-                    while (input != null)
-                    {
-                        OpenDeneme.Items.Add(input);
-                        input = inputStream.ReadString();
-
-                    }
-                    //cleanup
-                    inputStream.Close();
-                    inputStream.Dispose();
-                }
-            }
-        }
         /// <summary>
         /// Save text file
         /// </summary>
@@ -196,51 +218,79 @@ namespace COMP123_S2019_FinalTestA.Views
             {
                 using (StreamWriter outputstream = new StreamWriter(File.Open(ChracterSaveFileDialog.FileName, FileMode.Create)))
                 {
-                    outputstream.WriteLine("Deneme Basarili");
-                    outputstream.WriteLine("Bunu Texte Yazdik");
-                    outputstream.WriteLine("Reading Details");
+                   
 
                     //Cleanup
                     outputstream.Close();
                     outputstream.Dispose();
                 }
 
-                
-
             }
 
             MessageBox.Show("File Saved Successfully!", "Saving...",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+            LoadAbility();
+        }
+
+        private void LoadAbility()
+        {
+            
+            AgilityDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            StrengthDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            EnduranceDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            ReasonDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            IntuitionDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            PsycheDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            PopularityDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            FightingDataLabel.Text = random.Next(10, 50 + 1).ToString();
+
+            Program.chracter.Agility = AgilityDataLabel.Text;
+            Program.chracter.Strength = StrengthDataLabel.Text;
+            Program.chracter.Endurance = EnduranceDataLabel.Text;
+            Program.chracter.Reason = ReasonDataLabel.Text;
+            Program.chracter.Intuition = IntuitionDataLabel.Text;
+            Program.chracter.Psyche = PsycheDataLabel.Text;
+            Program.chracter.Popularity = PopularityDataLabel.Text;
+            Program.chracter.Fighting = FightingDataLabel.Text;
+           
 
         }
-        /// <summary>
-        /// Binary save file
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BinarySaveToolStripButton_Click(object sender, EventArgs e)
+
+        private void HeroGenerator_Load(object sender, EventArgs e)
         {
-            ChracterSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            ChracterSaveFileDialog.FileName = "Character_Sheet.txt";
-            ChracterSaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            var result = ChracterSaveFileDialog.ShowDialog();
-            if (result != DialogResult.Cancel)
-            {
-                using (BinaryWriter outputstream = new BinaryWriter(File.Open(ChracterSaveFileDialog.FileName, FileMode.Create)))
-                {
-                    outputstream.Write("Deneme Basarili");
-                    outputstream.Write("Bunu Texte Yazdik");
-                    outputstream.Write("Reading Details");
-                    //Cleanup
-                    outputstream.Close();
-                    outputstream.Dispose();
-                }
+            LoadNames();
+            LoadAbility();
+            LoadPower(@"../../Data/powers.txt");
+            GenerateRandomPowers();
+            CsAgilityDataLabel.Text = Program.chracter.Agility;
+            CsFightingDataLabel.Text = Program.chracter.Fighting;
+            CsStrenghtDataLabel.Text = Program.chracter.Strength;
+            CsEnduranceDataLabel.Text = Program.chracter.Endurance;
+            CsReasonDataLabel.Text = Program.chracter.Reason;
+            CsInitutionDataLabel.Text = Program.chracter.Intuition;
+            CsPsycheDataLabel.Text = Program.chracter.Psyche;
+            CsPopularityDataLabel.Text = Program.chracter.Popularity;
+            CsHeroNameDataLabel.Text = Program.chracter.HeroName;
+            
 
-            }
 
-            MessageBox.Show("File Saved Successfully!", "Saving...",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+
+
+
+
+
+        }
+
+        private void GeneratePower_Click(object sender, EventArgs e)
+        {
+           GenerateRandomPowers();
         }
     }
 }
