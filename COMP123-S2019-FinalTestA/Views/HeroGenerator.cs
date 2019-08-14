@@ -19,10 +19,12 @@ namespace COMP123_S2019_FinalTestA.Views
         public static List<string> PowerList = new List<string>();
 
         Random random = new Random();
+
         public HeroGenerator()
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// First Name reading
         /// </summary>
@@ -65,6 +67,7 @@ namespace COMP123_S2019_FinalTestA.Views
             }
 
         }
+
         /// <summary>
         /// Generate first and last name when you click generate button
         /// </summary>
@@ -73,7 +76,9 @@ namespace COMP123_S2019_FinalTestA.Views
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             LoadNames();
+
         }
+
         /// <summary>
         /// Method generate first name and last name
         /// </summary>
@@ -81,22 +86,26 @@ namespace COMP123_S2019_FinalTestA.Views
         {
             // Random Name Generator
             ReadName(@"../../Data/firstNames.txt");
-           
+
             var nameCount = random.Next(NameList.Count);
-            FirstNameDataLabel.Text = NameList[nameCount];
-            Program.chracter.FirstName = FirstNameDataLabel.Text;
+            Program.chracter.FirstName = NameList[nameCount];
+            FirstNameDataLabel.Text = Program.chracter.FirstName;
             
+
 
             //Random Last Name Generator
             ReadLastName(@"../../Data/lastNames.txt");
-            
-            var lastNameCount = random.Next(LastNameList.Count);
-            LastNameDataLabel.Text = LastNameList[lastNameCount];
-            Program.chracter.LastName = LastNameDataLabel.Text;
 
-            Program.chracter.HeroName = FirstNameDataLabel.Text + " " + LastNameDataLabel.Text;
+            var lastNameCount = random.Next(LastNameList.Count);
+
+            Program.chracter.LastName = LastNameList[lastNameCount];
+            LastNameDataLabel.Text = Program.chracter.LastName;
+            
+
+            Program.chracter.HeroName = Program.chracter.FirstName + " " + Program.chracter.LastName;
 
         }
+
         /// <summary>
         /// Read Power
         /// </summary>
@@ -124,9 +133,9 @@ namespace COMP123_S2019_FinalTestA.Views
         private void GenerateRandomPowers()
         {
             // Random Power Generator
-            
 
             var randomIndex = random.Next(PowerList.Count);
+
             PowerOneDataLabel.Text = PowerList[randomIndex];
             randomIndex = random.Next(PowerList.Count);
             PowerTwoDataLabel.Text = PowerList[randomIndex];
@@ -190,15 +199,26 @@ namespace COMP123_S2019_FinalTestA.Views
             if (result != DialogResult.Cancel)
             {
                 // open file stream to read
-                using (StreamReader inputStream = new StreamReader(File.Open(ChracterOpenFileDialog.FileName, FileMode.Open)))
+                using (StreamReader inputStream =
+                    new StreamReader(File.Open(ChracterOpenFileDialog.FileName, FileMode.Open)))
                 {
                     // read stuff from the file into the Character Sheet object
                     var input = inputStream.ReadLine();
                     while (input != null)
                     {
-                     
 
+                        CsAgilityDataLabel.Text = inputStream.ReadLine();
+                        CsFightingDataLabel.Text = inputStream.ReadLine();
+                        CsStrenghtDataLabel.Text = inputStream.ReadLine();
+                        CsEnduranceDataLabel.Text = inputStream.ReadLine();
+                        CsReasonDataLabel.Text = inputStream.ReadLine();
+                        CsInitutionDataLabel.Text = inputStream.ReadLine();
+                        CsPsycheDataLabel.Text = inputStream.ReadLine();
+                        CsPopularityDataLabel.Text = inputStream.ReadLine();
+                        CsHeroNameDataLabel.Text = inputStream.ReadLine();
+                        
                     }
+
                     //cleanup
                     inputStream.Close();
                     inputStream.Dispose();
@@ -219,9 +239,24 @@ namespace COMP123_S2019_FinalTestA.Views
             var result = ChracterSaveFileDialog.ShowDialog();
             if (result != DialogResult.Cancel)
             {
-                using (StreamWriter outputstream = new StreamWriter(File.Open(ChracterSaveFileDialog.FileName, FileMode.Create)))
+                using (StreamWriter outputstream =
+                    new StreamWriter(File.Open(ChracterSaveFileDialog.FileName, FileMode.Create)))
                 {
-                   
+                   outputstream.WriteLine(CsAgilityDataLabel.Text = Program.chracter.Agility);
+                   outputstream.WriteLine(CsFightingDataLabel.Text = Program.chracter.Fighting);
+                   outputstream.WriteLine(CsStrenghtDataLabel.Text = Program.chracter.Strength);
+                   outputstream.WriteLine(CsEnduranceDataLabel.Text = Program.chracter.Endurance);
+                   outputstream.WriteLine(CsReasonDataLabel.Text = Program.chracter.Reason);
+                   outputstream.WriteLine(CsInitutionDataLabel.Text = Program.chracter.Intuition);
+                   outputstream.WriteLine(CsPsycheDataLabel.Text = Program.chracter.Psyche);
+                   outputstream.WriteLine(CsPopularityDataLabel.Text = Program.chracter.Popularity);
+                   outputstream.WriteLine(CsHeroNameDataLabel.Text = Program.chracter.HeroName);
+                    foreach (var a in Hero.Powers)
+                    {
+                       outputstream.WriteLine(CsAllPowerList.Items.Add(a));
+                    }
+
+
 
                     //Cleanup
                     outputstream.Close();
@@ -238,29 +273,41 @@ namespace COMP123_S2019_FinalTestA.Views
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
             LoadAbility();
+
         }
 
         private void LoadAbility()
         {
-            
-            AgilityDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            StrengthDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            EnduranceDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            ReasonDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            IntuitionDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            PsycheDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            PopularityDataLabel.Text = random.Next(10, 50 + 1).ToString();
-            FightingDataLabel.Text = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Agility = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Strength = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Endurance = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Reason = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Intuition = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Psyche = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Popularity = random.Next(10, 50 + 1).ToString();
+            Program.chracter.Fighting = random.Next(10, 50 + 1).ToString();
 
-            Program.chracter.Agility = AgilityDataLabel.Text;
-            Program.chracter.Strength = StrengthDataLabel.Text;
-            Program.chracter.Endurance = EnduranceDataLabel.Text;
-            Program.chracter.Reason = ReasonDataLabel.Text;
-            Program.chracter.Intuition = IntuitionDataLabel.Text;
-            Program.chracter.Psyche = PsycheDataLabel.Text;
-            Program.chracter.Popularity = PopularityDataLabel.Text;
-            Program.chracter.Fighting = FightingDataLabel.Text;
-           
+
+            AgilityDataLabel.Text = Program.chracter.Agility;
+            StrengthDataLabel.Text = Program.chracter.Strength;
+            EnduranceDataLabel.Text = Program.chracter.Endurance;
+            ReasonDataLabel.Text = Program.chracter.Reason;
+            IntuitionDataLabel.Text = Program.chracter.Intuition;
+            PsycheDataLabel.Text = Program.chracter.Psyche;
+            PopularityDataLabel.Text = Program.chracter.Popularity;
+            FightingDataLabel.Text = Program.chracter.Fighting;
+
+
+            //
+            //            Program.chracter.Agility = AgilityDataLabel.Text;
+            //            Program.chracter.Strength = StrengthDataLabel.Text;
+            //            Program.chracter.Endurance = EnduranceDataLabel.Text;
+            //            Program.chracter.Reason = ReasonDataLabel.Text;
+            //            Program.chracter.Intuition = IntuitionDataLabel.Text;
+            //            Program.chracter.Psyche = PsycheDataLabel.Text;
+            //            Program.chracter.Popularity = PopularityDataLabel.Text;
+            //            Program.chracter.Fighting = FightingDataLabel.Text;
+
 
         }
 
@@ -270,6 +317,14 @@ namespace COMP123_S2019_FinalTestA.Views
             LoadAbility();
             LoadPower(@"../../Data/powers.txt");
             GenerateRandomPowers();
+            LoadChracterSheet();
+        }
+
+        /// <summary>
+        /// This Method Load Chracter Sheet
+        /// </summary>
+        private void LoadChracterSheet()
+        {
             CsAgilityDataLabel.Text = Program.chracter.Agility;
             CsFightingDataLabel.Text = Program.chracter.Fighting;
             CsStrenghtDataLabel.Text = Program.chracter.Strength;
@@ -283,20 +338,29 @@ namespace COMP123_S2019_FinalTestA.Views
             {
                 CsAllPowerList.Items.Add(a);
             }
-
-
-
-
-
-
-
-
-
         }
 
         private void GeneratePower_Click(object sender, EventArgs e)
         {
-           GenerateRandomPowers();
+            GenerateRandomPowers();
+
+        }
+
+        private void Clear()
+        {
+            CsAgilityDataLabel.Text = "";
+            CsFightingDataLabel.Text = "";
+            CsStrenghtDataLabel.Text = "";
+            CsEnduranceDataLabel.Text = "";
+            CsReasonDataLabel.Text = "";
+            CsInitutionDataLabel.Text = "";
+            CsPsycheDataLabel.Text = "";
+            CsPopularityDataLabel.Text = "";
+            CsHeroNameDataLabel.Text = "";
+            CsAllPowerList.ClearSelected();
+            FirstNameDataLabel.Text = "";
+            LastNameDataLabel.Text = "";
+
         }
     }
 }
